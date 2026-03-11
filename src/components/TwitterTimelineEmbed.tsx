@@ -57,13 +57,10 @@ export function TwitterTimelineEmbed() {
         strategy="afterInteractive"
         onLoad={() => initTimeline()}
       />
-      <div
-        ref={containerRef}
-        className="flex justify-center min-h-[320px]"
-        aria-label={`Timeline de @${X_MARX_USERNAME} en X`}
-      >
+      <div className="relative min-h-[320px]">
+        {/* Estado de carga en un sibling: así React no gestiona nodos dentro del div que Twitter muta */}
         {!loaded && (
-          <div className="flex flex-col items-center justify-center gap-3 py-12 text-marx-crema-oscuro">
+          <div className="flex flex-col items-center justify-center gap-3 py-12 text-marx-crema-oscuro absolute inset-0 z-0">
             <p className="text-sm">Cargando timeline de X…</p>
             <a
               href={`https://twitter.com/${X_MARX_USERNAME}`}
@@ -75,6 +72,12 @@ export function TwitterTimelineEmbed() {
             </a>
           </div>
         )}
+        {/* Contenedor solo para el widget: sin hijos de React para evitar removeChild al mutar el DOM */}
+        <div
+          ref={containerRef}
+          className="flex justify-center min-h-[320px] relative z-10"
+          aria-label={`Timeline de @${X_MARX_USERNAME} en X`}
+        />
       </div>
       <p className="mt-2 text-center text-xs text-marx-crema-oscuro/80">
         Si no se muestra el timeline, abre la cuenta directamente en{' '}
