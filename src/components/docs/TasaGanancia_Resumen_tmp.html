@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TasaGanancia_Resumen.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="la-tasa-de-ganancia-en-el-capital-libro-iii--esquemas-y-m%C3%A9todo-marxista">La tasa de ganancia en <em>El Capital</em> Libro III — Esquemas y método marxista</h1>
+<p>Resumen didáctico a partir de <em>El Capital</em>, Libro III (Siglo XXI), con énfasis en <strong>esquemas</strong>, <strong>aspectos importantes</strong> y <strong>método marxista</strong>.</p>
+<hr>
+<h2 id="1-d%C3%B3nde-est%C3%A1-el-tema-en-el-libro-iii">1. Dónde está el tema en el Libro III</h2>
+<p>En el <strong>Libro III</strong> Marx analiza el <strong>proceso global</strong> de la producción capitalista: no solo cómo se produce el plusvalor, sino cómo se <strong>presenta</strong> en la superficie (ganancia, interés, renta). La tasa de ganancia aparece en:</p>
+<ul>
+<li><strong>Sección primera:</strong> <em>Transformación del plusvalor en ganancia y de la tasa del plusvalor en tasa de ganancia</em> (Cap. I–VII).</li>
+<li><strong>Sección tercera:</strong> <em>Ley de la baja tendencial de la tasa de ganancia</em> (Cap. XIII–XV).</li>
+</ul>
+<hr>
+<h2 id="2-esquema-conceptual-de-la-plusval%C3%ADa-a-la-tasa-de-ganancia">2. Esquema conceptual: de la plusvalía a la tasa de ganancia</h2>
+<h3 id="21-precio-de-costo-y-ganancia">2.1 Precio de costo y ganancia</h3>
+<ul>
+<li><strong>Precio de costo (k)</strong> = lo que al capitalista le cuesta la mercancía: <strong>c + v</strong> (capital constante consumido + capital variable).</li>
+<li><strong>Plusvalor (pv)</strong> = trabajo no pagado; el capitalista “vende algo por lo cual no ha pagado nada”.</li>
+<li><strong>Ganancia (g)</strong> = mismo contenido que el plusvalor, pero <strong>medido sobre el capital global C</strong>, no solo sobre v.</li>
+</ul>
+<p>Por tanto: <strong>ganancia y plusvalor son la misma magnitud</strong>; la ganancia es la <strong>forma en que se presenta</strong> el plusvalor cuando se lo relaciona con todo el capital adelantado.</p>
+<h3 id="22-f%C3%B3rmulas-centrales">2.2 Fórmulas centrales</h3>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Fórmula</th>
+<th>Qué mide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tasa de plusvalor</strong></td>
+<td>( pv' = \frac{pv}{v} )</td>
+<td>Grado de explotación: plusvalor respecto al capital variable</td>
+</tr>
+<tr>
+<td><strong>Tasa de ganancia</strong></td>
+<td>( g' = \frac{pv}{C} = \frac{pv}{c + v} )</td>
+<td>“Grado de valorización” del capital global para el capitalista</td>
+</tr>
+</tbody>
+</table>
+<p>Relación entre ambas:</p>
+<p>[
+g' = pv' \cdot \frac{v}{C} = pv' \cdot \frac{v}{c + v}
+]</p>
+<p>En proporción: <strong>g' : pv' = v : C</strong>. Por tanto <strong>g' &lt; pv'</strong> (salvo el caso irreal v = C), porque v siempre es menor que C.</p>
+<hr>
+<h2 id="3-aspectos-importantes">3. Aspectos importantes</h2>
+<h3 id="31-dos-mediciones-de-la-misma-magnitud">3.1 Dos mediciones de la misma magnitud</h3>
+<ul>
+<li><strong>Tasa de plusvalor:</strong> pone de relieve el <strong>origen</strong> del plusvalor (trabajo vivo no pagado).</li>
+<li><strong>Tasa de ganancia:</strong> es lo que <strong>ve</strong> el capitalista y lo que regula la inversión (relación del excedente con todo el capital).</li>
+</ul>
+<p>Marx subraya: <em>«De la transformación de la tasa de plusvalor en tasa de ganancia debe deducirse la transformación del plusvalor en ganancia, y no a la inversa.»</em> Históricamente se partió de la ganancia; el plusvalor es lo <strong>escondido</strong> que hay que desentrañar por análisis.</p>
+<h3 id="32-mistificaci%C3%B3n">3.2 Mistificación</h3>
+<ul>
+<li>En la <strong>tasa de ganancia</strong> todas las partes del capital (c y v) parecen contribuir por igual al excedente.</li>
+<li>El <strong>origen</strong> del plusvalor (solo v crea valor nuevo) se <strong>oculta</strong>; la ganancia aparece como excedente del “precio de venta sobre el precio de costo”, como si viniera del capital en general o de la circulación.</li>
+<li>Esto es <strong>inversión sujeto–objeto</strong>: las fuerzas productivas del trabajo se presentan como fuerzas del capital.</li>
+</ul>
+<h3 id="33-no-confundir-tasa-de-ganancia-con-tasa-de-plusvalor">3.3 No confundir tasa de ganancia con tasa de plusvalor</h3>
+<p>Marx critica a Ricardo: <em>«Es una tentativa por entero errada la de tratar de presentar las leyes de la tasa de ganancia directamente como leyes de la tasa de plusvalor o viceversa.»</em><br>
+La tasa de ganancia depende de <strong>dos factores</strong>: la tasa de plusvalor <strong>y</strong> la composición del capital (c/v). Una misma tasa de plusvalor puede expresarse en tasas de ganancia muy distintas según c y v.</p>
+<hr>
+<h2 id="4-esquema-num%C3%A9rico-misma-pv-distinta-g">4. Esquema numérico: misma pv', distinta g'</h2>
+<p>Con <strong>tasa de plusvalor = 100 %</strong> (v = 100, pv = 100):</p>
+<table>
+<thead>
+<tr>
+<th>c</th>
+<th>v</th>
+<th>C</th>
+<th>g' = pv/C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50</td>
+<td>100</td>
+<td>150</td>
+<td>100/150 ≈ 66⅔ %</td>
+</tr>
+<tr>
+<td>100</td>
+<td>100</td>
+<td>200</td>
+<td>50 %</td>
+</tr>
+<tr>
+<td>200</td>
+<td>100</td>
+<td>300</td>
+<td>33⅓ %</td>
+</tr>
+<tr>
+<td>300</td>
+<td>100</td>
+<td>400</td>
+<td>25 %</td>
+</tr>
+<tr>
+<td>400</td>
+<td>100</td>
+<td>500</td>
+<td>20 %</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conclusión:</strong> Con el mismo grado de explotación, si crece el capital constante respecto al variable, <strong>la tasa de ganancia baja</strong>. Esto es la base de la ley de la baja tendencial.</p>
+<h3 id="41-condici%C3%B3n-matem%C3%A1tica-expl%C3%ADcita">4.1 Condición matemática explícita</h3>
+<p>Como ( g' = \frac{pv}{C} ), en el tiempo:</p>
+<ul>
+<li><strong>Si C (= c + v) aumenta más que pv</strong> → <strong>g' baja</strong> (es la tendencia que Marx afirma en la ley).</li>
+<li>Si pv aumentara más que C → g' subiría.</li>
+</ul>
+<p>La ley de la baja tendencial dice que, con el desarrollo capitalista, el <strong>capital global C tiende a crecer más</strong> que la masa de plusvalor pv (por el aumento de la composición orgánica: más c por cada v). Por tanto g' tiende a disminuir. Las “causas contrarrestantes” son factores que pueden frenar o revertir esa tendencia en periodos concretos.</p>
+<hr>
+<h2 id="5-ley-de-la-baja-tendencial-de-la-tasa-de-ganancia-cap-xiii">5. Ley de la baja tendencial de la tasa de ganancia (Cap. XIII)</h2>
+<h3 id="51-enunciado">5.1 Enunciado</h3>
+<ul>
+<li>Con el <strong>desarrollo capitalista</strong> aumenta la <strong>composición orgánica del capital</strong>: más medios de producción (c) por cada unidad de trabajo vivo (v). Es decir, <strong>c crece más que v</strong> en relación al capital global.</li>
+<li>Por tanto, <strong>v/C</strong> disminuye; si la tasa de plusvalor se mantiene (o incluso sube), la fórmula ( g' = pv' \cdot \frac{v}{C} ) implica que <strong>g' tiende a bajar</strong>.</li>
+<li>La ley: <em>«La tendencia progresiva de la tasa general de ganancia a la baja sólo es una expresión, peculiar al modo capitalista de producción, del desarrollo progresivo de la fuerza productiva social del trabajo.»</em></li>
+</ul>
+<h3 id="52-no-es-contradicci%C3%B3n-con-m%C3%A1s-ganancia">5.2 No es contradicción con “más ganancia”</h3>
+<ul>
+<li>La <strong>masa de ganancia</strong> (plusvalor total) puede <strong>aumentar</strong> aunque <strong>baje la tasa</strong> de ganancia (porque crece el capital total y/o el número de obreros explotados).</li>
+<li>Ejemplo del texto: de 4c + 2v + 2pv (g' = 33⅓ %) a 15c + 3v + 3pv (g' = 16⅔ %): la masa de plusvalor pasa de 2 a 3 (+50 %), pero la tasa de ganancia se reduce a la mitad.</li>
+</ul>
+<h3 id="53-por-qu%C3%A9-la-econom%C3%ADa-burguesa-no-pudo-formularla">5.3 Por qué la economía burguesa no pudo formularla</h3>
+<p>Marx señala que para ello hacía falta:</p>
+<ul>
+<li>Distinguir <strong>capital constante y variable</strong>.</li>
+<li>Presentar el <strong>plusvalor separado de la ganancia</strong>.</li>
+<li>Analizar la <strong>composición orgánica del capital</strong> y la <strong>formación de la tasa general de ganancia</strong>.</li>
+</ul>
+<p>Sin eso, la ley queda en misterio; por eso <em>«toda la economía política no ha logrado descubrirla hasta el presente»</em>.</p>
+<hr>
+<h2 id="6-causas-contrarrestantes-cap-xiv">6. Causas contrarrestantes (Cap. XIV)</h2>
+<p>La ley se manifiesta como <strong>tendencia</strong>, no como caída lineal, porque actúan <strong>factores que contrarrestan</strong> la baja:</p>
+<ol>
+<li><strong>Mayor grado de explotación del trabajo</strong> (jornada, intensidad, plusvalor relativo) → sube pv'.</li>
+<li><strong>Salario por debajo del valor de la fuerza de trabajo</strong>.</li>
+<li><strong>Abaratamiento de los elementos del capital constante</strong> (c crece en cantidad física, pero puede bajar en valor por unidad).</li>
+<li><strong>Sobrepoblación relativa</strong> (ejército de reserva) → presión a la baja sobre salarios.</li>
+<li><strong>Comercio exterior</strong> (mercancías más baratas, mayor explotación en el exterior).</li>
+<li><strong>Aumento del capital accionario</strong> (dividendos como “ganancia” que no exigen igual tasa sobre todo el capital desembolsado).</li>
+</ol>
+<hr>
+<h2 id="7-m%C3%A9todo-marxista-destacado">7. Método marxista destacado</h2>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Cómo aparece en la tasa de ganancia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Esencia vs apariencia</strong></td>
+<td>La esencia es el plusvalor (trabajo no pagado); la apariencia es la ganancia como “producto del capital global” y del mercado.</td>
+</tr>
+<tr>
+<td><strong>Deducción, no punto de partida</strong></td>
+<td>Se deduce la ganancia y g' a partir del plusvalor y pv'; no se toma g' como dato y se “busca” el plusvalor después (como Malthus).</td>
+</tr>
+<tr>
+<td><strong>Abstracción progresiva</strong></td>
+<td>Primero se analiza g' suponiendo que ganancia = plusvalor y venta a valores; luego (Sección segunda) se introduce la ganancia media y los precios de producción.</td>
+</tr>
+<tr>
+<td><strong>Ley tendencial</strong></td>
+<td>La baja de g' es <strong>ley tendencial</strong>; las causas contrarrestantes explican por qué no se ve una caída “pura” en la realidad.</td>
+</tr>
+<tr>
+<td><strong>Crítica de la economía política</strong></td>
+<td>Se muestra por qué Ricardo y otros no podían explicar la tasa de ganancia: no tenían la distinción c/v ni el plusvalor como categoría separada.</td>
+</tr>
+<tr>
+<td><strong>Independencia de la ley</strong></td>
+<td>La ley se examina <strong>antes</strong> de la escisión de la ganancia en interés, renta, etc.; así se prueba que es inherente al capital global, no efecto de esa distribución.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8-esquema-de-lectura-sugerido">8. Esquema de lectura sugerido</h2>
+<ol>
+<li><strong>Cap. I:</strong> Precio de costo y ganancia (plusvalor como excedente sobre k).</li>
+<li><strong>Cap. II:</strong> Definición de g' = pv/C y mistificación.</li>
+<li><strong>Cap. III:</strong> Relación g' = pv' · (v/C); casos con pv' constante y v/C variable.</li>
+<li><strong>Cap. XIII:</strong> Ley en cuanto tal y ejemplos numéricos.</li>
+<li><strong>Cap. XIV:</strong> Causas contrarrestantes.</li>
+<li><strong>Cap. XV:</strong> Desarrollo de las contradicciones internas (exceso de capital, crisis).</li>
+</ol>
+<hr>
+<p><em>Fuente: Karl Marx, <em>El Capital</em>, Libro III, Siglo XXI (ed. cit.). Sección primera y Sección tercera.</em></p>
+
+</body>
+</html>

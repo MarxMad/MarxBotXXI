@@ -1,0 +1,43 @@
+export const libros = [
+  {
+    id: 'el-capital',
+    titulo: 'El Capital',
+    subtitulo: 'Crítica de la economía política',
+    ano: '1867 (Libro I)',
+    resumen: 'Obra magna de Marx. Analiza la producción capitalista: mercancía, valor, plusvalía, acumulación y las leyes que rigen el modo de producción capitalista.',
+    temas: ['Valor y mercancía', 'Plusvalía', 'Acumulación', 'Tendencia histórica'],
+    nivel: 'Avanzado',
+  },
+  {
+    id: 'manifiesto-comunista',
+    titulo: 'Manifiesto del Partido Comunista',
+    ano: '1848',
+    resumen: 'Escrito con Engels. Expone el programa del comunismo, la historia como lucha de clases, el papel revolucionario de la burguesía y del proletariado.',
+    temas: ['Burguesía y proletariado', 'Programa comunista', 'Crítica a otras corrientes'],
+    nivel: 'Introductorio',
+  },
+  {
+    id: 'ideologia-alemana',
+    titulo: 'La ideología alemana',
+    ano: '1845-1846',
+    resumen: 'Con Engels. Desarrolla el materialismo histórico y la crítica a la filosofía idealista alemana (Feuerbach, Bauer, Stirner).',
+    temas: ['Materialismo histórico', 'Ideología', 'División del trabajo'],
+    nivel: 'Intermedio',
+  },
+  {
+    id: 'manuscritos-1844',
+    titulo: 'Manuscritos económicos y filosóficos de 1844',
+    ano: '1844',
+    resumen: 'Textos de juventud sobre alienación del trabajo, trabajo enajenado y humanismo. Base de la crítica al capitalismo.',
+    temas: ['Alienación', 'Trabajo enajenado', 'Humanismo'],
+    nivel: 'Introductorio',
+  },
+  {
+    id: 'critica-programa-gotha',
+    titulo: 'Crítica del programa de Gotha',
+    ano: '1875',
+    resumen: 'Crítica al programa del partido obrero alemán. Distingue fase socialista («a cada cual según su trabajo») y fase comunista («a cada cual según sus necesidades»).',
+    temas: ['Estado', 'Transición', 'Distribución'],
+    nivel: 'Intermedio',
+  },
+]

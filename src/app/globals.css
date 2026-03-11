@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --rojo-oscuro: #8B0000;
+  --rojo: #B22222;
+  --rojo-claro: #CC3333;
+  --dorado: #DAA520;
+  --dorado-claro: #FFD700;
+  --negro: #0D0D0D;
+  --negro-surface: #1A1A1A;
+  --crema: #F5F0E6;
+  --crema-oscuro: #E8E0D0;
+  --blanco: #FFFEF9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-marx-negro text-marx-crema font-body antialiased;
+  line-height: 1.6;
+}
+
+@layer components {
+  .header-band {
+    height: 6px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--dorado) 0,
+      var(--dorado) 12px,
+      var(--rojo-oscuro) 12px,
+      var(--rojo-oscuro) 24px
+    );
+  }
+  .seccion-titulo {
+    @apply font-display font-bold text-lg uppercase tracking-wider text-marx-rojo-claro mb-2 pb-1 border-b-2 border-marx-dorado;
+  }
+  .panel {
+    @apply bg-marx-negro-surface rounded-md p-5 pl-6 border-l-4 border-marx-rojo shadow-lg;
+  }
+  .panel h3 {
+    @apply font-display font-semibold text-sm text-marx-dorado uppercase tracking-wide mb-3;
+  }
+  .card-periodo {
+    @apply bg-marx-negro-surface rounded-md p-5 pl-6 border-l-4 border-marx-dorado shadow-lg;
+  }
+  .link-concepto {
+    @apply text-marx-dorado-claro no-underline border-b border-dotted border-marx-dorado pb-px;
+  }
+  .link-concepto:hover {
+    @apply text-marx-blanco border-solid;
+  }
+  .btn-marx {
+    @apply px-4 py-2.5 font-display font-semibold text-sm uppercase tracking-wide bg-marx-rojo text-marx-blanco border-2 border-marx-dorado rounded cursor-pointer transition-all;
+  }
+  .btn-marx:hover {
+    @apply bg-marx-rojo-claro brightness-110;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero: suaviza el fondo oscuro */
+.hero-glow {
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 0, 0, 0.12) 0%, transparent 60%);
+}
