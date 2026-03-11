@@ -1,7 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { CarouselTweetsMarx } from '@/components/CarouselTweetsMarx'
+import { TwitterTimelineEmbed } from '@/components/TwitterTimelineEmbed'
+import { X_MARX_USERNAME, INSTAGRAM_MARX_URL } from '@/data/tweetsMarx'
 
 const pilares = [
   { numero: '4', label: 'Simuladores' },
@@ -204,13 +205,36 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Carrusel Tweets de Marx + enlace Instagram */}
+      {/* Tweets reales de X + enlace Instagram */}
       <section className="py-8 sm:py-12 bg-marx-negro border-t border-white/5">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="font-display font-bold text-xl sm:text-2xl text-marx-blanco mb-6 text-center">
-            Citas de Marx
+        <div className="max-w-2xl mx-auto px-4">
+          <h2 className="font-display font-bold text-xl sm:text-2xl text-marx-blanco mb-2 text-center">
+            Tweets de Marx
           </h2>
-          <CarouselTweetsMarx />
+          <p className="text-center text-marx-crema-oscuro text-sm mb-6">
+            Cronología real de nuestra cuenta en X (Twitter). Citas y fragmentos de Marx y Engels.
+          </p>
+          <TwitterTimelineEmbed />
+          <div className="flex flex-wrap justify-center gap-6 mt-6">
+            <a
+              href={`https://twitter.com/${X_MARX_USERNAME}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-marx-dorado-claro hover:text-marx-dorado font-display font-semibold text-sm transition-colors"
+            >
+              <span aria-hidden>𝕏</span>
+              @{X_MARX_USERNAME} en X
+            </a>
+            <a
+              href={INSTAGRAM_MARX_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-marx-dorado-claro hover:text-marx-dorado font-display font-semibold text-sm transition-colors"
+            >
+              <span aria-hidden>📸</span>
+              Instagram
+            </a>
+          </div>
         </div>
       </section>
 

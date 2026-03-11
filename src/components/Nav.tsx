@@ -17,12 +17,12 @@ const grupos = [
       { href: '/historia/global', label: 'Historia global' },
       { href: '/hegemonia-mundial', label: 'Hegemonía mundial' },
       { href: '/proletariado-crisis', label: 'Proletariado y crisis' },
-      { href: '/subsuncion-formal', label: 'Subsunción formal' },
     ],
   },
   {
     titulo: 'Estudio',
     links: [
+      { href: '/estudio', label: 'Dashboard Estudio' },
       { href: '/conceptos', label: 'Conceptos' },
       { href: '/matematicas-marx', label: 'Matemáticas Marx' },
       { href: '/teorias', label: 'Teorías' },

@@ -19,3 +19,6 @@ export const tweetsMarx: TweetMarx[] = [
 
 /** URL de la cuenta de Instagram donde se publican los tweets de Marx. Cambiar por la cuenta real. */
 export const INSTAGRAM_MARX_URL = 'https://www.instagram.com/marxensiglo21/'
+
+/** Usuario de X (Twitter) de la cuenta que publica tweets/citas de Marx. Sin @. Ejemplo: MarxBotXXI */
+export const X_MARX_USERNAME = 'AiMarx55909'

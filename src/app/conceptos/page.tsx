@@ -18,6 +18,15 @@ export default function ConceptosPage() {
         <p className="mb-5 text-marx-crema-oscuro">
           Glosario didáctico con referencia a <em>El Capital</em> y otras fuentes. Los textos de Historia enlazan aquí.
         </p>
+        <div className="mb-6 p-4 rounded-lg border border-marx-dorado/40 bg-marx-negro-surface/50">
+          <h2 className="font-display font-semibold text-sm text-marx-dorado uppercase tracking-wide mb-2">Tema desarrollado</h2>
+          <p className="text-marx-crema-oscuro text-sm mb-2">
+            Subsunción formal y subsunción real del trabajo al capital (cooperación, manufactura, maquinaria). Texto completo con fuentes.
+          </p>
+          <Link href="/subsuncion-formal" className="text-marx-dorado-claro font-semibold text-sm hover:underline">
+            Ver Subsunción formal y real →
+          </Link>
+        </div>
         <dl className="m-0">
           {conceptos.map((c) => (
             <div key={c.id} className="mt-4 first:mt-0" id={c.id}>
