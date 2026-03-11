@@ -96,7 +96,7 @@ export default function HaciendasPage() {
                 <tr className="border-b border-white/10"><td className="py-2 pr-3 font-medium text-marx-crema">Ganaderas</td><td className="py-2 pr-3">Ganado bovino, ovino, caprino</td><td className="py-2">Norte (Coahuila, Durango, Nuevo León), Bajío, Tlaxcala</td></tr>
                 <tr className="border-b border-white/10"><td className="py-2 pr-3 font-medium text-marx-crema">Azucareras</td><td className="py-2 pr-3">Caña de azúcar (ingenios)</td><td className="py-2">Morelos (Cuernavaca, Cuautla), Veracruz (Jalapa), Michoacán (Autlán), Puebla (Izúcar)</td></tr>
                 <tr className="border-b border-white/10"><td className="py-2 pr-3 font-medium text-marx-crema">Pulqueras</td><td className="py-2 pr-3">Pulque (maguey)</td><td className="py-2">Hidalgo (Apan, Zempoala), Tlaxcala, Estado de México, Puebla</td></tr>
-                <tr className="border-b border-white/10"><td className="py-2 pr-3 font-medium text-marx-crema">Henequeneras</td><td className="py-2 pr-3">Henequén (fibra, “oro verde”)</td><td className="py-2">Yucatán (auge s. XIX–XX; >1 200 centros en radio de 80 km de Mérida hacia 1910)</td></tr>
+                <tr className="border-b border-white/10"><td className="py-2 pr-3 font-medium text-marx-crema">Henequeneras</td><td className="py-2 pr-3">Henequén (fibra, “oro verde”)</td><td className="py-2">Yucatán (auge s. XIX–XX; &gt;1 200 centros en radio de 80 km de Mérida hacia 1910)</td></tr>
                 <tr className="border-b border-white/10"><td className="py-2 pr-3 font-medium text-marx-crema">De beneficio (minería)</td><td className="py-2 pr-3">Plata, oro (método de patio, amalgama)</td><td className="py-2">Hidalgo (Pachuca), Guanajuato, Zacatecas, Oaxaca (Sierra Norte)</td></tr>
                 <tr className="border-b border-white/10"><td className="py-2 pr-3 font-medium text-marx-crema">Mixtas</td><td className="py-2 pr-3">Agricultura + ganadería (y a veces obrajes)</td><td className="py-2">Comunes en Bajío, centro y sur; muchas combinaban cereales, maguey y ganado</td></tr>
               </tbody>
@@ -150,7 +150,7 @@ export default function HaciendasPage() {
             </div>
             <div className="border-l-4 border-marx-dorado pl-4">
               <h3 className="font-display font-semibold text-marx-rojo-claro text-sm uppercase mb-1">Yucatán</h3>
-              <p className="text-[0.95rem] text-marx-crema-oscuro"><strong>Henequeneras</strong>. Auge desde mediados del s. XIX (Guerra de Castas, máquina desfibradora, demanda de cordel). Entre 1901 y 1916 Yucatán fue el primer productor mundial de fibras duras naturales; >1 200 centros en radio de 80 km de Mérida. Henequén conocido como “oro verde”. Ejemplo: Sotuta de Peón.</p>
+              <p className="text-[0.95rem] text-marx-crema-oscuro"><strong>Henequeneras</strong>. Auge desde mediados del s. XIX (Guerra de Castas, máquina desfibradora, demanda de cordel). Entre 1901 y 1916 Yucatán fue el primer productor mundial de fibras duras naturales; &gt;1 200 centros en radio de 80 km de Mérida. Henequén conocido como “oro verde”. Ejemplo: Sotuta de Peón.</p>
             </div>
             <div className="border-l-4 border-marx-dorado pl-4">
               <h3 className="font-display font-semibold text-marx-rojo-claro text-sm uppercase mb-1">Estado de México</h3>

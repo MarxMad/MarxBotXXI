@@ -12,9 +12,7 @@ const grupos = [
     titulo: 'Contenido',
     links: [
       { href: '/simulador', label: 'Simulador' },
-      { href: '/linea-tiempo', label: 'Línea de tiempo' },
-      { href: '/historia/mexico', label: 'Historia México' },
-      { href: '/historia/global', label: 'Historia global' },
+      { href: '/historia', label: 'Historia' },
       { href: '/hegemonia-mundial', label: 'Hegemonía mundial' },
       { href: '/proletariado-crisis', label: 'Proletariado y crisis' },
     ],
@@ -22,13 +20,7 @@ const grupos = [
   {
     titulo: 'Estudio',
     links: [
-      { href: '/estudio', label: 'Dashboard Estudio' },
-      { href: '/conceptos', label: 'Conceptos' },
-      { href: '/matematicas-marx', label: 'Matemáticas Marx' },
-      { href: '/teorias', label: 'Teorías' },
-      { href: '/libros', label: 'Libros' },
-      { href: '/ejercicios', label: 'Ejercicios' },
-      { href: '/juegos', label: 'Juegos' },
+      { href: '/estudio', label: 'Estudio' },
     ],
   },
   {

@@ -1,4 +1,4 @@
-import { INSTAGRAM_MARX_URL, X_MARX_USERNAME } from '@/data/tweetsMarx'
+import { X_MARX_USERNAME } from '@/data/tweetsMarx'
 
 export function Footer() {
   return (
@@ -17,15 +17,6 @@ export function Footer() {
           >
             <span aria-hidden>𝕏</span>
             @{X_MARX_USERNAME}
-          </a>
-          <a
-            href={INSTAGRAM_MARX_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-marx-crema hover:text-marx-dorado font-semibold text-sm transition-colors"
-          >
-            <span aria-hidden>📸</span>
-            Instagram
           </a>
         </div>
       </div>
