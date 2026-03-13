@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { TwitterTimelineEmbed } from '@/components/TwitterTimelineEmbed'
 import { X_MARX_USERNAME } from '@/data/tweetsMarx'
 
 const pilares = [
@@ -205,25 +204,24 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Tweets reales de X */}
+      {/* Enlace a la cuenta en X (sin embed: el widget de X es inestable) */}
       <section className="py-8 sm:py-12 bg-marx-negro border-t border-white/5">
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="font-display font-bold text-xl sm:text-2xl text-marx-blanco mb-2 text-center">
             Tweets de Marx
           </h2>
           <p className="text-center text-marx-crema-oscuro text-sm mb-6">
-            Cronología real de nuestra cuenta en X (Twitter). Citas y fragmentos de Marx y Engels.
+            Citas y fragmentos de Marx y Engels en nuestra cuenta en X.
           </p>
-          <TwitterTimelineEmbed />
-          <div className="flex flex-wrap justify-center gap-6 mt-6">
+          <div className="flex justify-center">
             <a
               href={`https://twitter.com/${X_MARX_USERNAME}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-marx-dorado-claro hover:text-marx-dorado font-display font-semibold text-sm transition-colors"
+              className="inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-marx-negro border border-marx-dorado/40 text-marx-dorado-claro hover:bg-white/5 hover:border-marx-dorado/60 font-display font-semibold text-base transition-colors"
             >
-              <span aria-hidden>𝕏</span>
-              @{X_MARX_USERNAME} en X
+              <span aria-hidden className="text-xl">𝕏</span>
+              Ver @{X_MARX_USERNAME} en X
             </a>
           </div>
         </div>
